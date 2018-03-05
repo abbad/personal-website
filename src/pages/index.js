@@ -13,12 +13,15 @@ class Index extends React.Component {
     this.state = { selected: <Biography/> }
   }
 
-  onClick = (text,e) => {
-    if (text === 'biography'){
-      this.state = { selected: <Biography/> }
-    } else if (text === 'projects') {
-      this.state = { selected: <Projects/> }
-    }    
+  onClick = (text, e) => {
+    switch(text) {
+      case 'biography': 
+        this.state = { selected: <Biography/> }  
+        break
+      case 'projects': 
+        this.state = { selected: <Projects/> }  
+        break
+    }
   };
 
   render() {

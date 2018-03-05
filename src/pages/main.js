@@ -1,6 +1,5 @@
 import React from "react"
 import styled, { css }  from "styled-components";
-import Link from "gatsby-link";
 
 export const media = {
   handheld: (...args) => css`
@@ -26,7 +25,7 @@ const Sidenav = styled.div`
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111; 
+  background-color: #fff; 
   overflow-x: hidden; 
   padding-top: 20px;
   ${ media.handheld`
@@ -40,10 +39,10 @@ const SidenavLinks = styled.a`
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: black;
   display: block;
   &:hover {
-    color: #f1f1f1;
+    color: #818181;
   }
 `
 
@@ -54,7 +53,6 @@ const Main = styled.div`
 `;
 
 export default ({onClick, children}) => { 
-
   return (
     <div>
       <Sidenav> 
