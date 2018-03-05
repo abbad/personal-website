@@ -1,6 +1,6 @@
 import React from "react"
 import styled, { css }  from "styled-components";
-
+import Link from "gatsby-link";
 
 export const media = {
   handheld: (...args) => css`
@@ -53,13 +53,14 @@ const Main = styled.div`
   padding: 0px 10px;
 `;
 
+export default ({onClick, children}) => { 
 
-export default ({children}) =>(
-  <div>
-    <Sidenav> 
-    <SidenavLinks href="#biography">Biography</SidenavLinks>
-      <SidenavLinks href="#projects">Projects</SidenavLinks>
-    </Sidenav>
-    <Main>{children}</Main>
-  </div>
-);
+  return (
+    <div>
+      <Sidenav> 
+        <SidenavLinks href="#biography" onClick={onClick.bind(null,'biography')} >Biography</SidenavLinks>
+        <SidenavLinks href="#projects" onClick={onClick.bind(null, 'projects')}>Projects</SidenavLinks>
+      </Sidenav>
+      <Main>{children}</Main>
+    </div>
+)};
