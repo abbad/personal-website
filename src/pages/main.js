@@ -7,7 +7,8 @@ export const media = {
       ${ css(...args) }
     }
   `
-}
+};
+
 const Container = styled.div`
   margin: 3rem auto;
   max-width: 600px;
@@ -15,24 +16,27 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 `;
 
 /* The sidebar menu */
 const Sidenav = styled.div`
   height: 100%; 
   width: 160px; 
-  position: fixed; 
+  display: block;
+  position: initial;
+  float: left;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #fff; 
-  overflow-x: hidden; 
+  overflow: hidden; 
   padding-top: 20px;
   ${ media.handheld`
     padding-top: 15px;
     font-size: 18px;
   `}
-`
+`;
 
 /* The navigation menu links */
 const SidenavLinks = styled.a`
@@ -44,7 +48,7 @@ const SidenavLinks = styled.a`
   &:hover {
     color: #818181;
   }
-`
+`;
 
 /* Style page content */
 const Main = styled.div`
