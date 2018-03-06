@@ -56,13 +56,17 @@ const Main = styled.div`
   padding: 0px 10px;
 `;
 
+const SideNavContainer = styled.div`
+  clear: both;
+`;
+
 export default ({onClick, children}) => { 
   return (
-    <div>
+    <SideNavContainer>
       <Sidenav> 
         <SidenavLinks href="#biography" onClick={onClick.bind(null,'aboutMe')} >About Me</SidenavLinks>
         <SidenavLinks href="#projects" onClick={onClick.bind(null, 'projects')}>Projects</SidenavLinks>
       </Sidenav>
       <Main>{children}</Main>
-    </div>
+    </SideNavContainer>
 )};
