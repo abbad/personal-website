@@ -1,8 +1,8 @@
 import React from "react"
 
-const Biography = () =>(
+const AboutMe = () =>(
   <div>
-    <h1> Biography </h1>
+    <h1> About Me </h1>
     <p> I am a software engineer based in NYC originally from Amman, Jordan.  </p>
     <p> I studied computer science at the German Jordanian University and I spent 2 years in Berlin working at at Nokia as a Software engineer in Test. I also worked with a professor on a research paper for measuring UDP packet loss between two remote machines. </p>
     <p> At 24 I moved to the big apple and jumped head first into 2 early stage startups. Later I moved to the Simons Foundation where I acted as a mentor by sharing my experience and knowledge about Django, React testing and software engineering best practices. </p>
@@ -11,4 +11,4 @@ const Biography = () =>(
   </div>
 );
 
-export default Biography;
+export default AboutMe;

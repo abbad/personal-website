@@ -1,7 +1,7 @@
 import React from "react"
 
 import Container from "./main";
-import Biography from "./biography/index";
+import AboutMe from "./about_me/index";
 import Projects from "./projects/index"
 
 
@@ -10,13 +10,13 @@ class Index extends React.Component {
 
   constructor() {
     super()
-    this.state = { selected: <Biography/> }
+    this.state = { selected: <AboutMe/> }
   }
 
   onClick = (text, e) => {
     switch(text) {
-      case 'biography': 
-        this.state = { selected: <Biography/> }  
+      case 'aboutMe': 
+        this.state = { selected: <AboutMe/> }  
         break
       case 'projects': 
         this.state = { selected: <Projects/> }  

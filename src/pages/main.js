@@ -60,7 +60,7 @@ export default ({onClick, children}) => {
   return (
     <div>
       <Sidenav> 
-        <SidenavLinks href="#biography" onClick={onClick.bind(null,'biography')} >Biography</SidenavLinks>
+        <SidenavLinks href="#biography" onClick={onClick.bind(null,'aboutMe')} >About Me</SidenavLinks>
         <SidenavLinks href="#projects" onClick={onClick.bind(null, 'projects')}>Projects</SidenavLinks>
       </Sidenav>
       <Main>{children}</Main>
