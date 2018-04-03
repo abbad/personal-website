@@ -15,12 +15,15 @@ class Index extends React.Component {
     width: 200px;
     margin: 10px;
     float: left;
+    margin-top: 100px;
+    font-family: century-gothic;
   `;
 
   static subTitle = styled.p`
     font-size: 13px;
     padding-top: 0px;
     margin-top: 0px;
+    font-family: Helvetica, sans-serif;
   `;
 
   static Image = styled.img`
@@ -29,8 +32,16 @@ class Index extends React.Component {
     float: left;
   `;
 
-  static Hero = styled.div`
 
+  static all = styled.div`
+    font-family: Helvetica, sans-serif;
+  `;
+
+  static Hero = styled.div`
+    overflow: auto;
+    border-bottom-style: solid;
+    border-bottom-color: gray;
+    border-bottom-width: 1px;
   `;
 
   constructor() {
@@ -65,13 +76,13 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div>
+      <all>
         <this.constructor.Hero>
           {this.renderImage()}
           {this.renderTitle()}
         </this.constructor.Hero>
         <Container children={this.state.selected} onClick={this.onClick} />
-      </div>
+      </all>
     );
   }
 }
